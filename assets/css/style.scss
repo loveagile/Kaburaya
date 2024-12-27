@@ -1,0 +1,836 @@
+@import './fonts';
+@import './screen';
+@import './reset';
+
+header {
+	padding: 20px 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@include media-xsm {
+		padding: 20px 10px;
+	}
+
+	.logo-img {
+		width: 200px;
+		height: 60px;
+		object-fit: contain;
+
+		@include media-sm {
+			width: 150px;
+			height: 45px;
+		}
+	}
+
+	.menu {
+		display: flex;
+
+		li {
+			margin-right: 28px;
+
+			&:nth-child(4) {
+				margin-right: 10px;
+			}
+
+			&:nth-child(5) {
+				margin-right: 0;
+			}
+
+			@include media-sm {
+				margin-right: 0;
+			}
+		}
+
+		font-size: 20rem;
+		font-weight: 600px;
+		font-family: $YuGothB;
+
+		@include media-sm {
+			font-size: 16rem;
+		}
+
+		&_btn {
+			color: white;
+			padding: 12rem 20rem;
+
+			// @include media-sm {
+			// 	padding: 6rem 10rem;
+			// }
+
+			box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+			border-radius: 4px;
+		}
+
+		&_free-start {
+			background-color: #5129AD;
+
+			&:hover {
+				opacity: 0.7;
+				transition: 0.5s;
+			}
+		}
+
+		&_login {
+			background-color: #00A0E9;
+
+			&:hover {
+				opacity: 0.7;
+				transition: 0.5s;
+			}
+		}
+	}
+}
+
+.main-visual {
+	padding: 20px 30px;
+
+	@include media-sm {
+		padding: 10px 15px;
+	}
+
+	&_title {
+		text-align: left;
+		font-size: 32rem;
+
+		@include media-sm {
+			font-size: 24rem;
+			text-align: center;
+		}
+	}
+
+	&_description {
+
+		display: flex;
+		gap: 5%;
+		justify-content: space-evenly;
+		margin-top: 100rem;
+		margin-bottom: 100rem;
+		align-items: center;
+		justify-content: center;
+
+		@include media-sm {
+			flex-direction: column;
+			margin-top: 32rem;
+			margin-bottom: 32rem;
+		}
+
+		&-txt {
+			display: flex;
+			flex-direction: column;
+			text-align: left;
+			font-size: min(32rem, 40px);
+
+			@include media-md {
+				font-size: 28rem;
+			}
+
+			@include media-xsm {
+				font-size: 22rem;
+			}
+
+			font-family: $YuGothB;
+			font-weight: 700;
+
+			.purple-txt {
+				margin-top: 12rem;
+				margin-bottom: 12rem;
+
+				@include media-sm {
+					line-height: 46rem;
+					font-size: 32rem;
+				}
+			}
+		}
+
+		&-image {
+			width: 40%;
+
+			@include media-sm {
+				margin-top: 32rem;
+				margin-bottom: 40rem;
+				width: 70%;
+			}
+		}
+	}
+}
+
+.concept {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&_description {
+		text-align: center;
+		font-family: $YuGothM;
+		margin-top: 56rem;
+		margin-bottom: 30rem;
+		font-size: 20rem;
+	}
+
+	&_workflow {
+		padding: 50rem 0 80rem 0;
+
+		@include media-sm {
+			padding: 50rem 0;
+		}
+
+		background-color: #5129AD;
+		width: 100%;
+		font-size: 24rem;
+		font-family: $YuGothM;
+
+		&-title {
+			margin-bottom: 64rem;
+			text-align: center;
+			color: white;
+		}
+
+		&-step {
+			display: flex;
+			justify-content: center;
+			gap: 16rem;
+			position: relative;
+
+			@include media-sm {
+				flex-direction: column;
+				position: unset;
+			}
+		}
+
+		.div-svg {
+			align-self: center;
+
+			svg {
+				@include media-sm {
+					transform: rotate(90deg);
+					width: 24px;
+					height: 24px;
+				}
+			}
+		}
+
+		.each-step {
+			padding: 50rem 12rem;
+			font-size: 16rem;
+			background-color: white;
+			border-radius: 8rem;
+			width: calc((100% - 300px) / 3);
+
+			@include media-lg {
+				width: calc((100% - 200px) / 3);
+				font-size: min(21rem, 16px);
+			}
+
+			@include media-sm {
+				width: 60%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			font-weight: 800;
+
+			&_title {
+				text-align: center;
+				margin-bottom: 20rem;
+			}
+		}
+
+		.second-step {
+			figure {
+				margin-top: 0;
+			}
+
+			text-align: center;
+		}
+
+		.each-link {
+			width: 200rem;
+			text-align: center;
+			font-size: 20rem;
+			background-color: black;
+			padding: 9rem 25rem;
+			border-radius: 4rem;
+			color: white;
+			position: absolute;
+			z-index: 999;
+			bottom: 0;
+
+			@include media-sm {
+				margin-left: auto;
+				margin-right: auto;
+				position: unset;
+			}
+		}
+
+		.first-link {
+			justify-content: center;
+			left: calc(134px - 16rem + (100% - 300px) / 3);
+
+			@include media-lg {
+				left: calc(84px - 16rem + (100% - 200px) / 3);
+			}
+
+			transform: translate(-50%, 50%);
+
+			@include media-sm {
+				margin-left: auto;
+				margin-right: auto;
+				position: unset;
+				transform: unset;
+			}
+		}
+
+		.second-link {
+			right: calc(134px - 16rem + (100% - 300px) / 3);
+
+			@include media-lg {
+				right: calc(84px - 16rem + (100% - 200px) / 3);
+			}
+
+			transform: translate(50%, 50%);
+
+			@include media-sm {
+				margin-left: auto;
+				margin-right: auto;
+				position: unset;
+				transform: unset;
+			}
+		}
+	}
+}
+
+.features {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 36rem;
+	font-family: $YuGothM;
+	font-weight: 700;
+	padding: 50rem 0;
+
+	&-btn {
+		font-size: 16rem;
+
+		@include media-md {
+			font-size: 20rem;
+		}
+
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		gap: 6rem;
+
+		div {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 15rem 0;
+			color: white;
+			border-top-right-radius: 6rem;
+			border-top-left-radius: 6rem;
+			width: calc((100% - 18rem) / 4);
+
+			@include media-md {
+				width: calc((100% - 6rem) / 2);
+			}
+
+			background-color: #B8BCC9;
+			border: none;
+
+			&:hover {
+				cursor: pointer;
+				opacity: 0.7;
+				transition: 1s;
+			}
+		}
+
+		.active {
+			background-color: #5129AD;
+		}
+	}
+
+	@include media-sm {
+		letter-spacing: 1rem;
+		font-size: 24rem;
+	}
+
+	&_title {
+		text-align: center;
+		position: relative;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			width: 45%;
+			height: 4px;
+			bottom: 0;
+		}
+
+		&::before {
+			left: 5%;
+			background-color: #2A7BC5;
+		}
+
+		&::after {
+			right: 5%;
+			background-color: #9EC9F2;
+		}
+
+		span {
+			font-size: 48rem;
+		}
+	}
+}
+
+.price {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.table-form {
+	font-size: 20rem;
+	font-family: $YuGothM;
+	width: 90%;
+	border: 1px solid #D9D9D9;
+	margin-top: 56rem;
+
+	.table-th {
+		padding-top: 30rem;
+		font-size: 30rem;
+		font-family: $YuGothB;
+		display: flex;
+		flex-direction: column;
+
+		&:nth-child(1) {
+			border-top: 6px solid #D9D9D9;
+		}
+
+		&:nth-child(2) {
+			border-top: 6px solid #5129AD;
+		}
+
+
+		.price-start-btn {
+			width: 80%;
+			border-radius: 4rem;
+			font-size: 16rem;
+			margin-top: 15rem;
+			margin-bottom: 15rem;
+			background-color: #5129AD;
+			display: flex;
+			justify-content: center;
+			font-family: $YuGothB;
+
+			span {
+				margin-right: 10rem;
+			}
+
+			&:hover {
+				opacity: 0.7;
+				transition: 1s;
+			}
+
+			a {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 10rem;
+
+				span {
+					@include media-xsm {
+						font-size: 14rem;
+					}
+				}
+
+				svg {
+					width: 22rem;
+					height: 22rem;
+
+					@include media-sm {
+						width: 20rem;
+						height: 20rem;
+					}
+
+					@include media-xsm {
+						width: 16rem;
+						height: 16rem;
+					}
+				}
+
+				border-radius: 8rem;
+				box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+				background-color: #5129AD;
+				color: white;
+			}
+		}
+	}
+
+	.hidden-th {
+		@include media-md {
+			display: none;
+			padding: 0;
+		}
+	}
+
+	&_section {
+		display: flex;
+
+		@include media-md {
+			flex-direction: column;
+		}
+
+		&-title {
+			display: flex;
+			flex-direction: column;
+			font-weight: 600;
+
+			@include media-md {
+				flex-direction: row;
+				align-items: center;
+			}
+
+			justify-content: center;
+			padding: 10rem;
+			width: calc((100%) / 3);
+			border: 1px solid #D9D9D9;
+
+			span {
+				font-size: 14rem;
+
+				@include media-md {
+					margin-left: 20rem;
+					font-size: 20rem;
+				}
+			}
+
+			@include media-md {
+				text-align: center;
+				background-color: #D9D9D9;
+				width: 100%;
+			}
+		}
+
+		&-content {
+			width: calc(100% / 3 * 2);
+			display: flex;
+
+			@include media-md {
+				width: 100%;
+			}
+
+			&_item {
+				padding: 25rem;
+
+				@include media-xsm {
+					padding: 20rem 0;
+				}
+
+				display: flex;
+				border-bottom: none;
+				justify-content: center;
+				align-items: center;
+				width: 50%;
+				border: 1px solid #D9D9D9;
+				;
+			}
+
+			.price-item {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				padding: 10rem 10rem;
+
+				&_txt {
+					display: flex;
+					flex-direction: column;
+
+					@include media-xsm {
+						flex-direction: row;
+					}
+				}
+
+				@include media-xsm {
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					padding: 10rem 0;
+				}
+
+				.number {
+					margin-right: 8rem;
+					font-size: min(50rem, 60px);
+					font-family: $Inter;
+				}
+
+				.small {
+					font-size: 16rem;
+				}
+			}
+		}
+	}
+}
+
+.cost-method {
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	font-size: 20rem;
+	font-family: $YuGothM;
+
+	&_item {
+		padding: 30rem;
+
+		&-title {
+			font-weight: 700;
+			margin-bottom: 10rem;
+		}
+
+		&-txt {
+			margin-top: 5rem;
+			margin-bottom: 5rem;
+		}
+
+		&-attention {
+			font-size: 20rem;
+			margin-top: 5rem;
+		}
+	}
+}
+
+.introduction {
+	font-size: 32rem;
+	display: flex;
+	justify-items: center;
+	min-width: max(40%, 300px);
+
+	@include media-sm {
+		font-size: 26rem;
+	}
+
+	font-weight: 700;
+
+	&_no {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 48rem;
+		padding: 20rem;
+		background-color: #5129AD;
+		color: white;
+	}
+
+	&_txt {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 20rem;
+		letter-spacing: 3rem;
+		text-align: center;
+		width: 100%;
+
+		@include media-sm {
+			letter-spacing: 1rem;
+		}
+
+		background-color: #F5F5F5;
+		color: black;
+	}
+}
+
+footer {
+	justify-content: flex-start;
+	background-color: #D9D9D9;
+
+	.footer-logo {
+		width: 200px;
+		height: 60px;
+		object-fit: contain;
+
+		@include media-sm {
+			width: 150px;
+			height: 45px;
+		}
+	}
+
+	.wrapper {
+		padding: 50rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		font-size: 24rem;
+		font-family: $YuGothM;
+	}
+
+	.copyright {
+		font-size: 20rem;
+		align-self: flex-end;
+
+		@include media-sm {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+	}
+}
+
+.each-feature {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+
+	&_title {
+		color: #5129AD;
+		margin-top: 50rem;
+		margin-bottom: 30rem;
+
+		&-no {
+			font-size: 24rem;
+		}
+
+		&-txt {
+			font-size: 32rem;
+			font-weight: 700;
+			margin-top: 5rem;
+
+			@include media-sm {
+				font-size: 28rem;
+			}
+		}
+	}
+
+	.feature-episodes {
+		width: 100%;
+
+		.each-feature_episode {
+			display: none;
+		}
+
+		.active {
+			display: block;
+		}
+	}
+
+	&_episode {
+		width: 100%;
+		background-color: #F5F5F5;
+
+		&-inner {
+			display: flex;
+			gap: 5rem;
+			justify-content: center;
+			align-items: center;
+
+			@include media-sm {
+				flex-direction: column;
+			}
+		}
+
+		&-img {
+			padding: 10rem;
+			width: 36%;
+			// object-fit: contain;
+
+			@include media-sm {
+				width: 70%;
+			}
+		}
+
+		&-desciption {
+			padding: 45rem 0;
+			display: flex;
+			gap: 15rem;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			font-size: 21rem;
+			text-align: center;
+
+			@include media-xsm {
+				text-align: center;
+			}
+
+			img {
+				width: 30rem;
+				height: 48rem;
+			}
+		}
+	}
+}
+
+.purple-txt {
+	color: #5129AD;
+}
+
+.weight-500 {
+	font-family: $YuGothB;
+	font-weight: 500;
+}
+
+.weight-600 {
+	font-family: $YuGothB;
+	font-weight: 600;
+}
+
+.start-btn {
+	width: 100%;
+	margin-top: 70rem;
+	margin-bottom: 90rem;
+	display: flex;
+	justify-content: center;
+	font-family: $YuGothB;
+
+	a {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10rem;
+
+		span {
+			font-size: 24rem;
+
+			@include media-xsm {
+				font-size: 16rem;
+			}
+		}
+
+		@include media-sm {
+			padding: 15rem 18rem;
+		}
+
+		svg {
+			width: 22rem;
+			height: 22rem;
+
+			@include media-sm {
+				width: 20rem;
+				height: 20rem;
+			}
+
+			@include media-xsm {
+				width: 16rem;
+				height: 16rem;
+			}
+		}
+
+		width: min(60%, 600px);
+		border-radius: 8rem;
+		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+		background-color: #5129AD;
+		color: white;
+	}
+
+	&:hover {
+		opacity: 0.7;
+		transition: 1s;
+	}
+}

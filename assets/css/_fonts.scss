@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Zen+Old+Mincho:wght@400;700;900&display=swap');
+
+@font-face {
+	font-family: YuGothM;
+	src: url(../fonts/YuGothM.ttc);
+}
+
+@font-face {
+	font-family: YuGothB;
+	src: url(../fonts/YuGothB.ttc);
+}
+
+@font-face {
+	font-family:  Inter;
+	src: url(../fonts/Inter.ttf);
+}
+
+$YuGothM: YuGothM;
+$YuGothB: YuGothB;
+$Inter: Inter;
+$ZenOldM: 'Zen Old Mincho', serif;

@@ -1,0 +1,92 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	scroll-behavior: smooth;
+	background: white;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+form,
+table,
+caption,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+img {
+	max-width: 100%;
+	object-fit: cover;
+}
+
+figure {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+ul,
+li {
+	list-style: none;
+	padding-left: 0;
+}
+
+a {
+	text-decoration: none;
+	color: unset;
+}
+
+a:hover {
+	text-decoration: none;
+	color: unset;
+}
+
+html {
+	font-size: calc(100 / 1400) * 1vw;
+
+	@include media-lg {
+		font-size: calc(100 / 1200) * 1vw;
+	}
+
+	@include media-md {
+		font-size: calc(100 / 992) * 1vw;
+	}
+
+	@include media-sm {
+		font-size: calc(100 / 768) * 1vw;
+	}
+
+	@include media-xsm {
+		font-size: calc(100 / 576) * 1vw;
+	}
+}
